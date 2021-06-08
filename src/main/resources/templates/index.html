@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>YB Tracking - Average sightings</title>
+</head>
+<body>
+<h1>Table showing average number of sightings per boat</h1>
+
+<table>
+    <tr>
+        <th>Team</th>
+        <th>Day</th>
+        <th>Average-Sighting</th>
+    </tr>
+    <tr th:each="boat : ${boats}">
+        <td th:text="${boat.name}">Team name</td>
+        <td th:text="${boat.day}"> 0</td>
+        <td th:text="${boat.averageNoSightings}">0</td>
+    </tr>
+</table>
+
+</body>
+</html>
